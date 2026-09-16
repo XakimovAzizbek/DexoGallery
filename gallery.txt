@@ -16,3 +16,8 @@ photo: file_000000007e4871f4a2298d964797a0cd.png
 name: telegram photo
 prompt: telegram, tg, telegram photo, telegram image, tg image, telegram image, telegram rasm, tg rasm
 photo: IMG_20260911_125730_565.jpg
+
+
+name: MALIBU 2
+prompt: malibu, malibu 2, malibu 2 xl, malibu 2 premier, malibu 2 turbo, malibu 2 turbo premier
+photo: IMG_20260816_071928_866.jpg
