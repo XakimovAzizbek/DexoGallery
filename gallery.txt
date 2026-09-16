@@ -21,3 +21,8 @@ photo: IMG_20260911_125730_565.jpg
 name: MALIBU 2
 prompt: malibu, malibu 2, malibu 2 xl, malibu 2 premier, malibu 2 turbo, malibu 2 turbo premier
 photo: IMG_20260816_071928_866.jpg
+
+
+name: BMW M4
+prompt: prompt: bmw, bmw 4 series, black bmw, black car, bmw m4, matte black car, dark car, luxury car, sports car, bmw coupe, rainy night, yacht, harbor, marina, moody aesthetic, cinematic car, night photography, car wallpaper, german car, red taillights, wet road, dock, superyacht, luxury lifestyle, car aesthetic, tuning car, mashina, qora mashina
+photo: 9633d9d210e46892c616422db111f125.jpg
