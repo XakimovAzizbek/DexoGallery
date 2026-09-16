@@ -113,6 +113,60 @@ function closeAllPopups() {
   document.querySelectorAll(".pin-popup").forEach(p => (p.hidden = true));
 }
 
+const AD_BLOCK_IDS = [
+  "int-48212",
+  "int-48222",
+  "int-48223",
+  "int-48224",
+  "int-48225"
+];
+const AD_COOLDOWN_MS = 5000;
+let lastAdShownAt = 0;
+
+function getRandomAdBlockId() {
+  return AD_BLOCK_IDS[Math.floor(Math.random() * AD_BLOCK_IDS.length)];
+}
+
+function showAdInBox(adBox) {
+  if (!window.Adsgram) return;
+  const blockId = getRandomAdBlockId();
+  try {
+    const AdController = window.Adsgram.init({ blockId });
+    AdController.show()
+      .then(() => {})
+      .catch(() => {});
+  } catch (e) {}
+}
+
+function createAdPinCard() {
+  const pin = document.createElement("div");
+  pin.className = "pin ad-pin";
+
+  const adBox = document.createElement("div");
+  adBox.className = "ad-box";
+  adBox.innerHTML = `<span class="ad-label">Reklama</span>`;
+  pin.appendChild(adBox);
+
+  let shown = false;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !shown) {
+        shown = true;
+        observer.disconnect();
+        const elapsed = Date.now() - lastAdShownAt;
+        const wait = elapsed < AD_COOLDOWN_MS ? AD_COOLDOWN_MS - elapsed : 0;
+        setTimeout(() => {
+          lastAdShownAt = Date.now();
+          showAdInBox(adBox);
+        }, wait);
+      }
+    });
+  }, { threshold: 0.5 });
+  observer.observe(pin);
+
+  return pin;
+}
+
 function createPinCard(item) {
   const pin = document.createElement("div");
   pin.className = "pin";
@@ -173,7 +227,12 @@ async function init() {
       empty.hidden = false;
       return;
     }
-    items.forEach(item => feed.appendChild(createPinCard(item)));
+    items.forEach((item, index) => {
+      feed.appendChild(createPinCard(item));
+      if ((index + 1) % 5 === 0) {
+        feed.appendChild(createAdPinCard());
+      }
+    });
   } catch (err) {
     empty.hidden = false;
     empty.textContent = "Rasmlarni yuklashda xatolik.";

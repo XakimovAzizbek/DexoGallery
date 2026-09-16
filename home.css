@@ -179,3 +179,31 @@ body{
 }
 .nav-btn svg{ width:24px; height:24px; }
 .nav-btn.active{ color:var(--text); background:#1c1c1f; }
+
+.ad-pin{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:180px;
+}
+.ad-box{
+  position:relative;
+  width:100%;
+  min-height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#161618;
+  border-radius:var(--radius);
+}
+.ad-label{
+  position:absolute;
+  top:8px;
+  left:8px;
+  font-size:11px;
+  color:var(--muted);
+  background:rgba(0,0,0,0.55);
+  padding:3px 8px;
+  border-radius:10px;
+  z-index:2;
+}
