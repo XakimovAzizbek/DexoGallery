@@ -1,6 +1,45 @@
 const IMAGES_DIR = "";
 const SAVED_KEY = "dexo_saved_pins";
 
+(function initIntroSplash() {
+  const splash = document.getElementById("introSplash");
+  const video = document.getElementById("introVideo");
+  if (!splash || !video) return;
+
+  let dismissed = false;
+
+  function dismiss() {
+    if (dismissed) return;
+    dismissed = true;
+    splash.classList.add("hide");
+    setTimeout(() => splash.remove(), 450);
+  }
+
+  // Fallback: if video can't load/play in time (slow internet), skip after 4s
+  const fallbackTimer = setTimeout(dismiss, 4000);
+
+  video.addEventListener("ended", () => {
+    clearTimeout(fallbackTimer);
+    dismiss();
+  });
+
+  video.addEventListener("error", () => {
+    clearTimeout(fallbackTimer);
+    dismiss();
+  });
+
+  // Try to play with sound; some browsers block unmuted autoplay,
+  // so fall back to muted playback rather than skipping the video.
+  video.muted = false;
+  const playPromise = video.play();
+  if (playPromise && playPromise.catch) {
+    playPromise.catch(() => {
+      video.muted = true;
+      video.play().catch(() => dismiss());
+    });
+  }
+})();
+
 function resolveImageSrc(photo) {
   if (/^https?:\/\//i.test(photo)) return photo;
   return IMAGES_DIR + photo;
