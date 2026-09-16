@@ -1,0 +1,19 @@
+name: bmw
+prompt: bmw, bmw m5, bmw car, qora mashina, black car
+photo: bmw.jpg
+
+name: bmw red
+prompt: bmw, qizil mashina, red car, sport car
+photo: bmw-red.jpg
+
+name: free fire
+prompt: free fire, free fire max, green background, o'yin, game
+photo: freefire.jpg
+
+name: girl aesthetic
+prompt: qiz, girl, aesthetic, portrait, mood
+photo: girl.jpg
+
+name: school girl
+prompt: qiz, girl, maktab, school, student
+photo: schoolgirl.jpg

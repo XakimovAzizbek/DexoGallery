@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Saqlanganlar — DexoGallery</title>
+<link rel="stylesheet" href="saved.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <span class="logo">Saqlangan pinlar</span>
+  </header>
+
+  <main id="feed" class="masonry"></main>
+
+  <p id="emptyState" class="empty-state" hidden>Hali saqlangan pinlar yo'q.</p>
+
+  <div id="toast" class="toast"></div>
+
+  <nav class="bottom-nav">
+    <a href="home.html" class="nav-btn" aria-label="Bosh sahifa">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2 2.5 10.6a1 1 0 0 0 .6 1.8H4V20a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-4.8h3v4.8a1 1 0 0 0 1 1H19a1 1 0 0 0 1-1v-7.6h.9a1 1 0 0 0 .6-1.8L12 3.2Z"/></svg>
+    </a>
+    <a href="search.html" class="nav-btn" aria-label="Qidiruv">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    </a>
+    <a href="saved.html" class="nav-btn active" aria-label="Saqlanganlar">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3a1 1 0 0 0-1 1v17l7-4.5 7 4.5V4a1 1 0 0 0-1-1H6Z"/></svg>
+    </a>
+  </nav>
+
+<script src="saved.js"></script>
+</body>
+</html>
