@@ -1,6 +1,11 @@
 const IMAGES_DIR = "images/";
 const SAVED_KEY = "dexo_saved_pins";
 
+function resolveImageSrc(photo) {
+  if (/^https?:\/\//i.test(photo)) return photo;
+  return IMAGES_DIR + photo;
+}
+
 let allItems = [];
 
 function parseGalleryText(text) {
@@ -51,7 +56,7 @@ function savePin(item) {
 
 function downloadImage(item) {
   const a = document.createElement("a");
-  a.href = IMAGES_DIR + item.photo;
+  a.href = resolveImageSrc(item.photo);
   a.download = item.photo;
   document.body.appendChild(a);
   a.click();
@@ -76,7 +81,7 @@ function createPinCard(item) {
   pin.className = "pin";
 
   const img = document.createElement("img");
-  img.src = IMAGES_DIR + item.photo;
+  img.src = resolveImageSrc(item.photo);
   img.loading = "lazy";
   img.alt = item.name || "";
 
