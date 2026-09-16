@@ -1,3 +1,8 @@
+name: shemagh scarf mask
+prompt: shemagh, keffiyeh, kufiya, scarf mask, face scarf, head scarf, arab scarf, desert scarf, military scarf, tactical scarf, black and white pattern, houndstooth pattern, checkered scarf, face covering, wrapped scarf, headwear, traditional scarf, cotton scarf, fringe scarf, tassels, fashion scarf, streetwear, outdoor gear, survival gear, airsoft gear, cosplay accessory, winter scarf, protective scarf, masked face, mysterious, product photo, white background, ro'mol, sharf, yuz ro'moli, bosh ro'moli, arab ro'moli, harbiy sharf, taktik sharf, oq qora naqsh, katakli sharf, yuz qopqog'i, o'ralgan sharf, bosh kiyimi, an'anaviy sharf, paxta sharf, popuk sharf, moda sharfi, ko'cha kiyimi, sarguzasht anjomlari, qishki sharf, himoya sharfi, niqoblangan yuz, sirli, mahsulot surati, oq fon
+photo: 691bd6af413517102469084c469e88a0.jpg
+
+
 name: bmw m4 white
 prompt: bmw, bmw m4, bmw m4 white, white bmw, white car, white sports car, bmw coupe, bmw showroom, bmw garage, tuning car, modified bmw, wide body kit, carbon fiber hood, sports car, luxury car, german car, car photography, car wallpaper, car aesthetic, night garage shoot, showroom lighting, reflective floor, black and white car, bmw logo, bmw badge, m series, m4 competition, street racing car, car enthusiast, supercar, dream car, automotive, mashina rasmi, sport mashina 
 photo: https://github.com/XakimovAzizbek/DexoGallery/releases/download/1/8547ce54459e256c9a8db0eadf417267.jpg
