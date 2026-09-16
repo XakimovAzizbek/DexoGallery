@@ -1,4 +1,4 @@
-const IMAGES_DIR = "images/";
+const IMAGES_DIR = "";
 const SAVED_KEY = "dexo_saved_pins";
 
 function resolveImageSrc(photo) {
