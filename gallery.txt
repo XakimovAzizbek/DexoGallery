@@ -11,3 +11,8 @@ photo: 1785118188993.png
 name: ✔️
 prompt: tasdiqlash, galochka, check mark, verifikatsiya, nishon, target
 photo: file_000000007e4871f4a2298d964797a0cd.png
+
+
+name: telegram photo
+prompt: telegram, tg, telegram photo, telegram image, tg image, telegram image, telegram rasm, tg rasm
+photo: IMG_20260911_125730_565.jpg
