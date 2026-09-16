@@ -26,3 +26,8 @@ photo: IMG_20260816_071928_866.jpg
 name: BMW M4
 prompt: prompt: bmw, bmw 4 series, black bmw, black car, bmw m4, matte black car, dark car, luxury car, sports car, bmw coupe, rainy night, yacht, harbor, marina, moody aesthetic, cinematic car, night photography, car wallpaper, german car, red taillights, wet road, dock, superyacht, luxury lifestyle, car aesthetic, tuning car, mashina, qora mashina
 photo: 9633d9d210e46892c616422db111f125.jpg
+
+
+name: mercedes amg grey
+prompt: mercedes, mercedes benz, mercedes amg, amg, mercedes e63, e63 amg, grey mercedes, gray car, silver car, black rims, stanced car, bagged car, air suspension, low car, tuned mercedes, german car, luxury sedan, night car, gas station, petrol station, night photography, car aesthetic, car wallpaper, sports sedan, german luxury, mercedes benz amg, dark wheels, red brake calipers, sedan, night shoot, urban car photography, mashina, kulrang mashina, mercedes rasm, sedan mashina, tungi mashina, benzin quyish shoxobchasi, zamonaviy mashina, lyuks mashina, sport sedan, nemis mashinasi, qora g'ildiraklar, past mashina, tyuning mashina
+photo: 423e998884b603c3889822e8be6c8832.jpg
