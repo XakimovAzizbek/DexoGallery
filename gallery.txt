@@ -36,3 +36,14 @@ photo: 423e998884b603c3889822e8be6c8832.jpg
 name: chevrolet nexia snow
 prompt: chevrolet, nexia, chevrolet nexia, daewoo nexia, white car, white nexia, tuned nexia, led headlights, blue led, custom grille, blue grille light, winter car, snow car, snowy road, night car, car in snow, uzbek car, uzbekistan car, local car, tuning car, modified car, sedan, white sedan, night photography, cold winter, snowy village, rural road, trees, foggy night, sedan car, chevrolet sedan, aftermarket lights, custom lighting, night drive, mashina, oq mashina, qorli yo'l, qish mashinasi, tungi mashina, neksiya, tyuningli mashina, moslashtirilgan chiroqlar, ko'k chiroq, panjara chirog'i, o'zbek mashinasi, mahalliy mashina, qishloq yo'li, qorli manzara, sovuq qish, tungi surat, sedan mashina, yorug'lik effekti
 photo: IMG_20260816_071827_742.jpg
+
+
+name: optical illusion spiral
+prompt: optical illusion, illusion, spiral illusion, trippy, trippy background, hypnotic, hypnotic spiral, psychedelic, kaleidoscope, mind bending, zoom effect, motion illusion, moving illusion, vibrating image, dizzy effect, abstract art, colorful spiral, blue and orange, fractal, pattern, geometric pattern, radial pattern, mesmerizing, visual trick, brain trick, wallpaper, abstract wallpaper, aesthetic background, trippy wallpaper, psychedelic art, digital art, vortex, tunnel effect, starburst, zvezda effekti, illyuziya, optik illyuziya, gipnotik rasm, trippi fon, aylanuvchi rasm, harakatlanuvchi rasm, ranga-rang naqsh, abstrakt rasm, geometrik naqsh, ko'z aldash, miya aldash, girdob, tunnel effekti, syujetli fon, rangli spiral, moviy va sariq, fraktal, dumaloq naqsh, aylana naqsh, sehrli rasm, fantastik rasm
+photo: IMG_20260915_072017_304.jpg
+
+
+name: golden crown logo
+prompt: golden, gold, golden text, gold text, golden crown, gold crown, king, royal, luxury, luxury gold, gold bars, gold bricks, gold nuggets, gold ore, wealth, rich, riches, money, treasure, black and gold, black gold background, gold sparkle, sparkle background, shiny gold, metallic gold, 3d text, 3d gold text, logo design, gold logo, premium, elite, expensive, king crown, crown logo, gold aesthetic, dark luxury, gold particles, gold dust, jewelry, precious metal, bullion, oltin, oltin matn, oltin toj, qirol, qirollik, boylik, pul, xazina, qora va oltin, yaltiroq oltin, metall oltin, 3d matn, logotip, oltin logotip, hashamat, elita, qimmat, toj logotip, qora fon, oltin zarralar, zargarlik, qimmatbaho metall, oltin quyma
+photo: file_00000000bee881f4a350841fc59f6870.png
+
