@@ -31,3 +31,8 @@ photo: 9633d9d210e46892c616422db111f125.jpg
 name: mercedes amg grey
 prompt: mercedes, mercedes benz, mercedes amg, amg, mercedes e63, e63 amg, grey mercedes, gray car, silver car, black rims, stanced car, bagged car, air suspension, low car, tuned mercedes, german car, luxury sedan, night car, gas station, petrol station, night photography, car aesthetic, car wallpaper, sports sedan, german luxury, mercedes benz amg, dark wheels, red brake calipers, sedan, night shoot, urban car photography, mashina, kulrang mashina, mercedes rasm, sedan mashina, tungi mashina, benzin quyish shoxobchasi, zamonaviy mashina, lyuks mashina, sport sedan, nemis mashinasi, qora g'ildiraklar, past mashina, tyuning mashina
 photo: 423e998884b603c3889822e8be6c8832.jpg
+
+
+name: chevrolet nexia snow
+prompt: chevrolet, nexia, chevrolet nexia, daewoo nexia, white car, white nexia, tuned nexia, led headlights, blue led, custom grille, blue grille light, winter car, snow car, snowy road, night car, car in snow, uzbek car, uzbekistan car, local car, tuning car, modified car, sedan, white sedan, night photography, cold winter, snowy village, rural road, trees, foggy night, sedan car, chevrolet sedan, aftermarket lights, custom lighting, night drive, mashina, oq mashina, qorli yo'l, qish mashinasi, tungi mashina, neksiya, tyuningli mashina, moslashtirilgan chiroqlar, ko'k chiroq, panjara chirog'i, o'zbek mashinasi, mahalliy mashina, qishloq yo'li, qorli manzara, sovuq qish, tungi surat, sedan mashina, yorug'lik effekti
+photo: IMG_20260816_071827_742.jpg
