@@ -113,29 +113,27 @@ function closeAllPopups() {
   document.querySelectorAll(".pin-popup").forEach(p => (p.hidden = true));
 }
 
-const AD_BLOCK_IDS = [
-  "int-48212",
-  "int-48222",
-  "int-48223",
-  "int-48224",
-  "int-48225"
+const AD_PAGES = [
+  "reklama1.html",
+  "reklama2.html",
+  "reklama3.html",
+  "reklama4.html",
+  "reklama5.html"
 ];
 const AD_COOLDOWN_MS = 5000;
 let lastAdShownAt = 0;
 
-function getRandomAdBlockId() {
-  return AD_BLOCK_IDS[Math.floor(Math.random() * AD_BLOCK_IDS.length)];
+function getRandomAdPage() {
+  return AD_PAGES[Math.floor(Math.random() * AD_PAGES.length)];
 }
 
-function showAdInBox(adBox) {
-  if (!window.Adsgram) return;
-  const blockId = getRandomAdBlockId();
-  try {
-    const AdController = window.Adsgram.init({ blockId });
-    AdController.show()
-      .then(() => {})
-      .catch(() => {});
-  } catch (e) {}
+function loadAdIntoBox(adBox) {
+  const iframe = document.createElement("iframe");
+  iframe.className = "ad-frame";
+  iframe.setAttribute("frameborder", "0");
+  iframe.setAttribute("scrolling", "no");
+  iframe.src = getRandomAdPage();
+  adBox.appendChild(iframe);
 }
 
 function createAdPinCard() {
@@ -147,17 +145,17 @@ function createAdPinCard() {
   adBox.innerHTML = `<span class="ad-label">Reklama</span>`;
   pin.appendChild(adBox);
 
-  let shown = false;
+  let loaded = false;
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting && !shown) {
-        shown = true;
+      if (entry.isIntersecting && !loaded) {
+        loaded = true;
         observer.disconnect();
         const elapsed = Date.now() - lastAdShownAt;
         const wait = elapsed < AD_COOLDOWN_MS ? AD_COOLDOWN_MS - elapsed : 0;
         setTimeout(() => {
           lastAdShownAt = Date.now();
-          showAdInBox(adBox);
+          loadAdIntoBox(adBox);
         }, wait);
       }
     });

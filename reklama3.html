@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Reklama</title>
+<style>
+  html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    background:#161618;
+    overflow:hidden;
+  }
+  .placeholder{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#9a9a9e;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:13px;
+  }
+</style>
+</head>
+<body>
+  <div class="placeholder" id="placeholder">Yuklanmoqda...</div>
+
+<script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+<script>
+  var BLOCK_ID = "int-48223";
+
+  function startAd() {
+    if (!window.Adsgram) {
+      document.getElementById("placeholder").textContent = "Reklama topilmadi";
+      return;
+    }
+    try {
+      var AdController = window.Adsgram.init({ blockId: BLOCK_ID });
+      AdController.show()
+        .then(function () {
+          if (window.parent) {
+            window.parent.postMessage({ dexoAd: "done", blockId: BLOCK_ID }, "*");
+          }
+        })
+        .catch(function () {
+          if (window.parent) {
+            window.parent.postMessage({ dexoAd: "error", blockId: BLOCK_ID }, "*");
+          }
+        });
+    } catch (e) {
+      document.getElementById("placeholder").textContent = "Reklama xatoligi";
+    }
+  }
+
+  startAd();
+</script>
+</body>
+</html>
