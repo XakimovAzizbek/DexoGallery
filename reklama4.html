@@ -32,9 +32,26 @@
 <script>
   var BLOCK_ID = "int-48224";
 
+  // Iframe ichida bo'lgani uchun Telegram bridge asosiy sahifada (home.html)
+  // yuklangan bo'ladi. Bir xil domen (GitHub Pages) bo'lgani sabab shu yerdan
+  // window.Telegram obyektini nusxalab olamiz.
+  try {
+    if (!window.Telegram && window.parent && window.parent !== window && window.parent.Telegram) {
+      window.Telegram = window.parent.Telegram;
+    }
+  } catch (e) {}
+
+  function isInsideTelegram() {
+    return !!(window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initData);
+  }
+
   function startAd() {
+    if (!isInsideTelegram()) {
+      document.getElementById("placeholder").style.display = "none";
+      return;
+    }
     if (!window.Adsgram) {
-      document.getElementById("placeholder").textContent = "Reklama topilmadi";
+      document.getElementById("placeholder").style.display = "none";
       return;
     }
     try {
@@ -51,7 +68,7 @@
           }
         });
     } catch (e) {
-      document.getElementById("placeholder").textContent = "Reklama xatoligi";
+      document.getElementById("placeholder").style.display = "none";
     }
   }
 
