@@ -9,70 +9,17 @@
     margin:0;
     padding:0;
     width:100%;
-    height:100%;
+    min-height:100%;
     background:#161618;
-    overflow:hidden;
-  }
-  .placeholder{
-    width:100%;
-    height:100%;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#9a9a9e;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    font-size:13px;
+    overflow:hidden;
   }
 </style>
 </head>
 <body>
-  <div class="placeholder" id="placeholder">Yuklanmoqda...</div>
-
-<script src="https://sad.adsgram.ai/js/sad.min.js"></script>
-<script>
-  var BLOCK_ID = "int-48212";
-
-  // Iframe ichida bo'lgani uchun Telegram bridge asosiy sahifada (home.html)
-  // yuklangan bo'ladi. Bir xil domen (GitHub Pages) bo'lgani sabab shu yerdan
-  // window.Telegram obyektini nusxalab olamiz.
-  try {
-    if (!window.Telegram && window.parent && window.parent !== window && window.parent.Telegram) {
-      window.Telegram = window.parent.Telegram;
-    }
-  } catch (e) {}
-
-  function isInsideTelegram() {
-    return !!(window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initData);
-  }
-
-  function startAd() {
-    if (!isInsideTelegram()) {
-      document.getElementById("placeholder").style.display = "none";
-      return;
-    }
-    if (!window.Adsgram) {
-      document.getElementById("placeholder").style.display = "none";
-      return;
-    }
-    try {
-      var AdController = window.Adsgram.init({ blockId: BLOCK_ID });
-      AdController.show()
-        .then(function () {
-          if (window.parent) {
-            window.parent.postMessage({ dexoAd: "done", blockId: BLOCK_ID }, "*");
-          }
-        })
-        .catch(function () {
-          if (window.parent) {
-            window.parent.postMessage({ dexoAd: "error", blockId: BLOCK_ID }, "*");
-          }
-        });
-    } catch (e) {
-      document.getElementById("placeholder").style.display = "none";
-    }
-  }
-
-  startAd();
-</script>
+  <script async="async" data-cfasync="false" src="https://pl29750461.profitableratecpmnetwork.com/d9e9ef4aa75ed19d1e14a7c19df1cff0/invoke.js"></script>
+  <div id="container-d9e9ef4aa75ed19d1e14a7c19df1cff0"></div>
 </body>
 </html>
