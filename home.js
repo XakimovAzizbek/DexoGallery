@@ -59,7 +59,7 @@ function parseGalleryText(text) {
       });
       return item;
     })
-    .filter(item => item.photo);
+    .filter(item => item.photo || item.ads);
 }
 
 async function loadGallery() {
@@ -113,26 +113,16 @@ function closeAllPopups() {
   document.querySelectorAll(".pin-popup").forEach(p => (p.hidden = true));
 }
 
-const AD_PAGES = [
-  "reklama1.html",
-  "reklama2.html",
-  "reklama3.html",
-  "reklama4.html",
-  "reklama5.html"
-];
+const AD_PAGE = "reklama.html";
 const AD_COOLDOWN_MS = 5000;
 let lastAdShownAt = 0;
-
-function getRandomAdPage() {
-  return AD_PAGES[Math.floor(Math.random() * AD_PAGES.length)];
-}
 
 function loadAdIntoBox(adBox) {
   const iframe = document.createElement("iframe");
   iframe.className = "ad-frame";
   iframe.setAttribute("frameborder", "0");
   iframe.setAttribute("scrolling", "no");
-  iframe.src = getRandomAdPage();
+  iframe.src = AD_PAGE;
   adBox.appendChild(iframe);
 }
 
@@ -225,10 +215,11 @@ async function init() {
       empty.hidden = false;
       return;
     }
-    items.forEach((item, index) => {
-      feed.appendChild(createPinCard(item));
-      if ((index + 1) % 5 === 0) {
+    items.forEach(item => {
+      if (item.ads && item.ads.toLowerCase() === "on") {
         feed.appendChild(createAdPinCard());
+      } else if (item.photo) {
+        feed.appendChild(createPinCard(item));
       }
     });
   } catch (err) {
