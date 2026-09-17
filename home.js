@@ -132,7 +132,7 @@ function createAdPinCard() {
 
   const adBox = document.createElement("div");
   adBox.className = "ad-box";
-  adBox.innerHTML = `<span class="ad-label">Reklama</span>`;
+  adBox.innerHTML = `<span class="ad-label">advertisement</span>`;
   pin.appendChild(adBox);
 
   let loaded = false;
