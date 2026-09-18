@@ -9,25 +9,52 @@
     margin:0;
     padding:0;
     width:100%;
-    min-height:100%;
+    height:100%;
     background:#161618;
+    overflow:hidden;
     display:flex;
     align-items:center;
     justify-content:center;
-    overflow:hidden;
+  }
+  #adFit{
+    transform-origin:center center;
   }
 </style>
 </head>
 <body>
-  <script>
-  atOptions = {
-    'key' : 'ba6cd708f63787da299dc5cd1db5cb90',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
+  <div id="adFit">
+    <script>
+      atOptions = {
+        'key' : 'ba6cd708f63787da299dc5cd1db5cb90',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highrevenueformat.com/ba6cd708f63787da299dc5cd1db5cb90/invoke.js"></script>
+  </div>
+
+<script>
+  function fitAd() {
+    var el = document.getElementById("adFit");
+    if (!el) return;
+    var w = el.scrollWidth;
+    var h = el.scrollHeight;
+    if (!w || !h) return;
+    var scaleX = window.innerWidth / w;
+    var scaleY = window.innerHeight / h;
+    var scale = Math.min(scaleX, scaleY, 1);
+    el.style.transform = "scale(" + scale + ")";
+  }
+
+  var observer = new MutationObserver(fitAd);
+  observer.observe(document.body, { childList: true, subtree: true });
+  window.addEventListener("resize", fitAd);
+  window.addEventListener("load", fitAd);
+  setTimeout(fitAd, 500);
+  setTimeout(fitAd, 1200);
+  setTimeout(fitAd, 2500);
 </script>
-<script src="https://www.highrevenueformat.com/ba6cd708f63787da299dc5cd1db5cb90/invoke.js"></script>
 </body>
 </html>
